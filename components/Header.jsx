@@ -41,13 +41,10 @@ function Header(props) {
                             <Link className="nav-link" href="/#about">About</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" href="/#experience">Experience</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" href="/#credentials">Credentials</Link>
-                        </li>
-                        <li className="nav-item">
                             <Link className="nav-link" href="/#projects">Projects</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" href="/articles">Articles</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" href="/#contact">Contact</Link>

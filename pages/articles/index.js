@@ -61,12 +61,12 @@ export default function Blog({ posts }) {
 //Generating the Static Props for the Blog Page
 export async function getStaticProps() {
     // get list of files from the posts folder
-    const files = fs.readdirSync("articles");
+    const files = fs.readdirSync("data/articles");
 
     // get frontmatter & slug from each post
     const posts = files.map((fileName) => {
         const slug = fileName.replace(".md", "");
-        const readFile = fs.readFileSync(`articles/${fileName}`, "utf-8");
+        const readFile = fs.readFileSync(`data/articles/${fileName}`, "utf-8");
         const { data: frontmatter } = matter(readFile);
 
         return {
