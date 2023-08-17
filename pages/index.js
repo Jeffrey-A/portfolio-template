@@ -16,10 +16,12 @@ import experienceData from '../data/experience';
 import credentialsData from '../data/credentials';
 import About from '../components/About';
 
+import { heroData } from '@/data';
+
 export default function Home() {
   useEffect(() => {
     const typed = new Typed("#my-name", {
-      strings: ["Jeffrey Almanzar."],
+      strings: [heroData.name],
       typeSpeed: 90,
       showCursor: false,
       startDelay: 150,
