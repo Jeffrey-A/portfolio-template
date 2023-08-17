@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Header from "./Header";
+import Nav from "./Nav";
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
     <div>
-      <Header />
+      <Nav />
       <div className="header-shim" />
       {children}
       <Footer />
