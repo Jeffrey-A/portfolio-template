@@ -559,6 +559,17 @@ ul {
   color: #000;
 }
 
+.social-media-container--light i {
+  color: #000;
+  font-size: 20px;
+}
+
+.social-media-container--light i:hover {
+  color: var(--primary-color);
+}
+
+
+
 .contact-cta {
   font-size: 25px;
   padding: 10px 20px;

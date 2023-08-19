@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { Heading, Text, Tooltip, Stack } from '@chakra-ui/react';
 
-import { aboutData, email } from '@/data';
+import { aboutData, email, linkedinLink, githubLink } from '@/data';
 
 export default function About(props) {
     const { skills, skillsLabel, imageSrc, sectionHeading } = aboutData;
@@ -55,6 +55,12 @@ function AboutText(props) {
                 To learn more about me, feel free to contact me, <a target="_blank"
                     href={`mailto:${email}`}>here</a>.
             </Text>
+            <div className="mt-4 social-media-container--light">
+                    <a className="d-inline-block me-3" target="_blank" href={githubLink}><i
+                        className="fa-brands fa-github me-2"></i>GitHub</a>
+                    <a className="d-inline-block" target="_blank" href={linkedinLink}><i
+                        className="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
+                </div>
         </div>
     )
 }
