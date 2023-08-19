@@ -16,7 +16,7 @@ import experienceData from '../data/experience';
 import credentialsData from '../data/credentials';
 import About from '../components/About';
 
-import { heroData } from '@/data';
+import { heroData, email, linkedinLink, githubLink } from '@/data';
 import projects from '@/data/projects';
 
 export default function Home() {
@@ -76,12 +76,12 @@ export default function Home() {
       <aside id="contact" className="contact-section section text-center">
         <div className="container">
           <Heading mb={5}>Get in Touch</Heading>
-          <a href="mailto:almanzarortizjeffrey@gmail.com" className="btn btn-hover btn-primary contact-cta">Get into
+          <a href={`mailto:${email}`} className="btn btn-hover btn-primary contact-cta">Get into
             my inbox</a>
           <div className="mt-4 social-media-container">
-            <a className="d-inline-block me-3" target="_blank" href="https://github.com/Jeffrey-A"><i
+            <a className="d-inline-block me-3" target="_blank" href={githubLink}><i
               className="fa-brands fa-github"></i></a>
-            <a className="d-inline-block" target="_blank" href="https://www.linkedin.com/in/jeffrey-almanzar/"><i
+            <a className="d-inline-block" target="_blank" href={linkedinLink}><i
               className="fa-brands fa-linkedin"></i></a>
           </div>
         </div>

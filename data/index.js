@@ -1,3 +1,7 @@
+export const githubLink = 'https://github.com/Jeffrey-A';
+export const linkedinLink = 'https://www.linkedin.com/in/jeffrey-almanzar/';
+export const email = 'almanzarortizjeffrey@gmail.com';
+
 export const navLinks = [
     {
         text: 'About',
@@ -23,7 +27,7 @@ export const heroData = {
     headline: `I'm a software engineer that loves bringing design to life. While working at RubensteinTech, I've contributed to more than 8 live projects using React, Node and other technologies.`,
     contactLink: {
         text: 'Contact me',
-        url: 'mailto:almanzarortizjeffrey@gmail.com'
+        url: `mailto:${email}`
     },
     resumeLink: {
         text: 'Resume',
