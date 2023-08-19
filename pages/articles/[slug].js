@@ -19,6 +19,7 @@ export default function Post({ frontmatter, content }) {
       <div className="container py-5">
         <div className="pb-2">
           <Link href='/articles'>
+          <i class="fa fa-arrow-left me-2" aria-hidden="true"></i>
             <span>Articles</span>
           </Link>
         </div>
