@@ -7,7 +7,9 @@ export default function Layout({ children }) {
     <div>
       <Nav />
       <div className="header-shim" />
-      {children}
+      <div className="main-content-wrapper">
+        {children}
+      </div>
       <Footer />
     </div>
   );
