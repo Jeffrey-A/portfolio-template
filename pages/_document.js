@@ -1,6 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
 
+import { name, heroHeadline } from '@/data';
+
 export default function Document() {
   return (
     <Html lang="en">
@@ -17,10 +19,9 @@ export default function Document() {
             gtag("config", "UA-145085705-1");
           `}
         </Script>
-        <title>Jeffrey Almanzar</title>
+        <title>{name}</title>
         <meta charset="utf-8" />
-        <meta name="description" content="Hi, my name is Jeffrey Almanzar. I’m a software engineer that loves implementing user interfaces following design guidelines, and I've
-        been in the web development industry for 3+ years focusing mainly on frontend development in React JS." />
+        <meta name="description" content={heroHeadline} />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         {/* favicon */}
         <link rel="icon" type="image/png" href="favicon.png?v=2" sizes="32x32" />

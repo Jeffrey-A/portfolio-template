@@ -1,6 +1,8 @@
 export const githubLink = 'https://github.com/Jeffrey-A';
 export const linkedinLink = 'https://www.linkedin.com/in/jeffrey-almanzar/';
 export const email = 'almanzarortizjeffrey@gmail.com';
+export const name = 'Jeffrey Almanzar';
+export const heroHeadline = `I'm a software engineer that loves bringing design to life. While working at RubensteinTech, I've contributed to more than 8 live projects using React, Node and other technologies.`;
 
 export const navLinks = [
     {
@@ -13,7 +15,7 @@ export const navLinks = [
     },
     {
         text: 'Articles',
-        url: '/#articles'
+        url: '/articles'
     },
     {
         text: 'Contact',
@@ -23,8 +25,8 @@ export const navLinks = [
 
 export const heroData = {
     introText: 'Hi, my name is',
-    name: 'Jeffrey Almanzar.',
-    headline: `I'm a software engineer that loves bringing design to life. While working at RubensteinTech, I've contributed to more than 8 live projects using React, Node and other technologies.`,
+    name: `${name}.`,
+    headline: heroHeadline,
     contactLink: {
         text: 'Contact me',
         url: `mailto:${email}`

@@ -16,7 +16,7 @@ import experienceData from '../data/experience';
 import credentialsData from '../data/credentials';
 import About from '../components/About';
 
-import { heroData, email, linkedinLink, githubLink } from '@/data';
+import { heroData, email, linkedinLink, githubLink, name } from '@/data';
 import projects from '@/data/projects';
 
 export default function Home() {
@@ -42,7 +42,7 @@ export default function Home() {
             <div className="position-relative">
               <div className="photo-container-wrapper position-absolute d-none d-lg-block">
                 <div className="photo-container">
-                  <img src="images/hero-photo.png" alt="Jeffrey Almanzar" />
+                  <img src="images/hero-photo.png" alt={name} />
                 </div>
               </div>
               {/* <!-- Overview --> */}
