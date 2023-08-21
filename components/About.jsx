@@ -4,63 +4,58 @@ import { Heading, Text, Tooltip, Stack } from '@chakra-ui/react';
 
 import { aboutData, email, linkedinLink, githubLink } from '@/data';
 
+import Accordions from './Accordions';
+
 export default function About(props) {
     const { skills, skillsLabel, imageSrc, sectionHeading } = aboutData;
 
     return (
         <div id="about" className="section">
             <Heading mb={4}>{sectionHeading}</Heading>
-            <div className="d-lg-flex align-items-center p-3 my-4 skills-section">
-                <p className="me-3 mb-3 mb-lg-0 primary-skill-label">{skillsLabel}</p>
-                <Stack align="flex-start" justify="flex-start" direction={['column', 'row']} spacing='24px'>
-                    {_.map(skills, (skillItem, index) => {
-                        const { category, sections } = skillItem;
-                        return (
-                            <Tooltip key={`skills-${index}`} hasArrow label={<Skills skillSections={sections} />}>
-                                <button>
-                                    <span className="me-2">{category}</span>
-                                    <i className="fa-solid fa-circle-info"></i>
-                                </button>
-                            </Tooltip>
-                        )
-                    })}
-                </Stack>
-            </div>
             <div className="d-lg-flex justify-content-between">
+                <AboutContent />
                 <div className="about-photo-container mb-3 mb-0">
                     <img src={imageSrc} alt="About image" />
                 </div>
-                <AboutText />
             </div>
         </div>
     )
 }
 
-function AboutText(props) {
+function AboutContent(props) {
     return (
         <div className="about-text">
             <Text fontSize='lg' mb={3}>
-                I’ve been in the web development industry
-                for more than three years. You can see a few of the projects that I've
-                contributed while working at RubensteinTech, <a target="_blank"
-                    href="https://www.rubensteintech.com/work/index.html">here</a>.
+                I’m a senior computer science student at Lehman College with a strong understanding of data structures, algorithms, and object-oriented programming. In addition, through the development of personal projects, I’ve taught myself web development, and I’m eager to get an internship in this field.
             </Text>
-            <Text mb={3}>
-                Throughout my web development journey, I've technically led 3 projects so far at RubensteinTech. Helping less experienced developers resolve technical problems when they are stuck in a given task, performing code reviews to maintain code quality and spot bugs before they are introduced. And most importantly, putting in the necessary work to make sure that we deliver the project on time.
-            </Text>
-            <Text mb={3}>
-                While I have full stack JavaScript development experience, my forte is frontend development. I have experience resolving web accessibility, browser compatibility, and front-end performing issues. In addition, I'm good in responsive web design and have developed a strong eye for design throughout my experience and education. Furthermore,  I also have experience in end-to-end testing using Cypress.io and unit testing using Jest.
-            </Text>
-            <Text mb={3}>
-                To learn more about me, feel free to contact me, <a target="_blank"
-                    href={`mailto:${email}`}>here</a>.
-            </Text>
+            <Skills skillSections={[
+                {
+                    label: 'Proficient in:',
+                    skills: [
+                        'HTML',
+                        'CSS',
+                        'JavaScript',
+                        'Sass',
+                        'Bootstrap 5',
+                        'React JS'
+                    ]
+                },
+                {
+                    label: 'Prior experience:',
+                    skills: [
+                        'TypeScript',
+                        'Redux',
+                        'Storybook',
+                        'jQuery',
+                    ]
+                },
+            ]} />
             <div className="mt-4 social-media-container--light">
-                    <a className="d-inline-block me-3" target="_blank" href={githubLink}><i
-                        className="fa-brands fa-github me-2"></i>GitHub</a>
-                    <a className="d-inline-block" target="_blank" href={linkedinLink}><i
-                        className="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
-                </div>
+                <a className="d-inline-block me-3" target="_blank" href={githubLink}><i
+                    className="fa-brands fa-github me-2"></i>GitHub</a>
+                <a className="d-inline-block" target="_blank" href={linkedinLink}><i
+                    className="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
+            </div>
         </div>
     )
 }
@@ -68,18 +63,21 @@ function AboutText(props) {
 
 function Skills({ skillSections }) {
     return (
-        <div className='p-3'>
-            {_.map(skillSections, (skillSection, index) => {
-                const { label, skills } = skillSection;
-                return (
-                    <React.Fragment key={`skill-section-${index}`}>
-                        <p className={index > 0 ? 'mt-3' : null}>{label}</p>
-                        <div className='skills-grid'>
-                            {_.map(skills, skill => <span key={`skill-section-item-${index}`} className='btn btn-secondary btn-sm skill'>{skill}</span>)}
-                        </div>
-                    </React.Fragment>
-                )
-            })}
+        <div className='mt-4'>
+            <Heading as='h3' size='md'>Technical Skills:</Heading>
+            <div className='py-3'>
+                {_.map(skillSections, (skillSection, index) => {
+                    const { label, skills } = skillSection;
+                    return (
+                        <React.Fragment key={`skill-section-${index}`}>
+                            <p className={index > 0 ? 'mt-3 mb-1' : 'mb-1'}>{label}</p>
+                            <div className='skills-grid'>
+                                {_.map(skills, skill => <span key={`skill-section-item-${index}`} className='btn btn-secondary btn-sm skill'>{skill}</span>)}
+                            </div>
+                        </React.Fragment>
+                    )
+                })}
+            </div>
         </div>
     )
 }

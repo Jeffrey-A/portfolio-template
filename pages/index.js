@@ -40,11 +40,11 @@ export default function Home() {
         <div>
           <div className="container">
             <div className="position-relative">
-              <div className="photo-container-wrapper position-absolute d-none d-lg-block">
+              {/* <div className="photo-container-wrapper position-absolute d-none d-lg-block">
                 <div className="photo-container">
                   <img src="images/hero-photo.png" alt={name} />
                 </div>
-              </div>
+              </div> */}
               {/* <!-- Overview --> */}
               <About />
               {/* <!-- Experience --> */}

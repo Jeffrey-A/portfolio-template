@@ -1,8 +1,20 @@
+/*
+
+TODO:
+- remove experience
+- Update credentials to be:
+--Education, certificates, Courses, Honors
+- Add image to the hero section
+- make sure it looks good on mobile
+- update skills data
+- figure out .next folder
+*/
+
 export const githubLink = 'https://github.com/Jeffrey-A';
 export const linkedinLink = 'https://www.linkedin.com/in/jeffrey-almanzar/';
 export const email = 'almanzarortizjeffrey@gmail.com';
 export const name = 'Jeffrey Almanzar';
-export const heroHeadline = `I'm a software engineer that loves bringing design to life. While working at RubensteinTech, I've contributed to more than 8 live projects using React, Node and other technologies.`;
+export const heroHeadline = `I’m a senior computer science student with a solid programming foundation looking for my first software development internship.`;
 
 export const navLinks = [
     {
