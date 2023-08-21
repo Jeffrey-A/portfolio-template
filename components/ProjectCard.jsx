@@ -25,14 +25,14 @@ export default function ProjectCard(props) {
                     </Text>
                     <p className="main-features mb-2">Main features</p>
                     <UnorderedList>
-                        {features.map(feature => <ListItem>{feature}</ListItem>)}
+                        {features.map((feature, index) => <ListItem key={`featured-item-${index}`}>{feature}</ListItem>)}
                     </UnorderedList>
                 </div>
                 <div className="project-content group">
                     <div className="d-flex project-skils">
                         <div className="pro-tools-container">
                             <p>
-                                {skills.map(skill => <span className="btn btn-sm btn-light">{skill}</span>)}
+                                {skills.map((skill, index) => <span key={`project-card-${index}`} className="btn btn-sm btn-light">{skill}</span>)}
                             </p>
                         </div>
                     </div>

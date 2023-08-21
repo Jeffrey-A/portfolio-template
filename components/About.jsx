@@ -13,10 +13,10 @@ export default function About(props) {
             <div className="d-lg-flex align-items-center p-3 my-4 skills-section">
                 <p className="me-3 mb-3 mb-lg-0 primary-skill-label">{skillsLabel}</p>
                 <Stack align="flex-start" justify="flex-start" direction={['column', 'row']} spacing='24px'>
-                    {_.map(skills, skillItem => {
+                    {_.map(skills, (skillItem, index) => {
                         const { category, sections } = skillItem;
                         return (
-                            <Tooltip hasArrow label={<Skills skillSections={sections} />}>
+                            <Tooltip key={`skills-${index}`} hasArrow label={<Skills skillSections={sections} />}>
                                 <button>
                                     <span className="me-2">{category}</span>
                                     <i className="fa-solid fa-circle-info"></i>
@@ -72,10 +72,10 @@ function Skills({ skillSections }) {
             {_.map(skillSections, (skillSection, index) => {
                 const { label, skills } = skillSection;
                 return (
-                    <React.Fragment>
+                    <React.Fragment key={`skill-section-${index}`}>
                         <p className={index > 0 ? 'mt-3' : null}>{label}</p>
                         <div className='skills-grid'>
-                            {_.map(skills, skill => <span className='btn btn-secondary btn-sm skill'>{skill}</span>)}
+                            {_.map(skills, skill => <span key={`skill-section-item-${index}`} className='btn btn-secondary btn-sm skill'>{skill}</span>)}
                         </div>
                     </React.Fragment>
                 )

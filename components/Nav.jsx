@@ -47,9 +47,9 @@ function Nav(props) {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mt-4 mt-lg-0 me-auto mb-2 mb-lg-0 d-lg-flex justify-content-end w-100">
-            {_.map(navLinks, (navLink) => {
+            {_.map(navLinks, (navLink, index) => {
               return (
-                <li className="nav-item" key={navLink.url}>
+                <li key={`nav-links-${index}`} className="nav-item" key={navLink.url}>
                   <Link className="nav-link" href={navLink.url}>
                     {navLink.text}
                   </Link>

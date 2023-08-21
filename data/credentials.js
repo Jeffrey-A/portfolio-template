@@ -75,10 +75,10 @@ function CredentialItem(props) {
     const { entries } = props;
     return (
         <div>
-            {entries.map(entry => {
+            {entries.map((entry, index) => {
                 const { institution, institutionLink, credential, dates } = entry;
                 return (
-                    <div className="experience d-flex mb-3">
+                    <div key={`credential-${index}`} className="experience d-flex mb-3">
                         <div className="logo-container">
                             <a target="_blank"
                                 href={institutionLink}>

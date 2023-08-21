@@ -169,16 +169,16 @@ function ExperienceItem(props) {
                     <a target="_blank"
                         href={companyLink}>{company}</a>
                 </h3>
-                {positions.map(position => {
+                {positions.map((position, index) => {
                     const { title, location, dates, bullets } = position;
                     return (
-                        <div className="mb-3">
+                        <div key={`position-${index}`} className="mb-3">
                             <h4 className="position mb-2">{title}</h4>
                             <p className="date-location mb-1">
                                 <span className="location">{location}</span>{dates}
                             </p>
                             <ul className="description-list">
-                                {bullets.map(bullet => <li>{bullet}</li>)}
+                                {bullets.map((bullet, index) => <li key={`bullet-${index}`}>{bullet}</li>)}
                             </ul>
                         </div>
                     )

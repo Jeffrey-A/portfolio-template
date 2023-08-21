@@ -62,9 +62,9 @@ export default function Home() {
                 <Heading mb={5}>Projects</Heading>
                 <div id="projects-skills" className="group">
                   <div className="project-container">
-                    {projects.map(project => {
+                    {projects.map((project, index) => {
                       const { name, link, description, features, skills } = project;
-                      return <ProjectCard title={name} url={link} leadText={description} features={features} skills={skills} />
+                      return <ProjectCard key={`projects-project-card-${index}`} title={name} url={link} leadText={description} features={features} skills={skills} />
                     })}
                   </div>
                 </div>
