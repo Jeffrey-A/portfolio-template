@@ -39,6 +39,7 @@ export const heroData = {
     introText: 'Hi, my name is',
     name: `${name}.`,
     headline: heroHeadline,
+    image: 'images/hero-image.png',
     contactLink: {
         text: 'Contact me',
         url: `mailto:${email}`

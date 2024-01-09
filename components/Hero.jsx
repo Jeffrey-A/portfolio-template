@@ -31,6 +31,11 @@ function Hero(props) {
                         </div>
                     </div>
                 </div>
+                <div className="d-none d-lg-block align-self-center">
+                    {heroData.image && (
+                        <img src={heroData.image} alt="Hero image" />
+                    )}
+                </div>
             </div>
         </div>
     );

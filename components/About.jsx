@@ -12,9 +12,9 @@ export default function About(props) {
     return (
         <div id="about" className="section">
             <Heading mb={4}>{sectionHeading}</Heading>
-            <div className="d-lg-flex justify-content-between">
+            <div className="d-lg-flex justify-content-between mt-5">
                 <AboutContent />
-                <div className="about-photo-container mb-3 mb-0">
+                <div className="about-photo-container mt-5 mt-lg-0 mb-3 mb-0 order-0">
                     <img src={imageSrc} alt="About image" />
                 </div>
             </div>
@@ -24,7 +24,7 @@ export default function About(props) {
 
 function AboutContent(props) {
     return (
-        <div className="about-text">
+        <div className="about-text order-1">
             <Text fontSize='lg' mb={3}>
                 I’m a senior computer science student at Lehman College with a strong understanding of data structures, algorithms, and object-oriented programming. In addition, through the development of personal projects, I’ve taught myself web development, and I’m eager to get an internship in this field.
             </Text>

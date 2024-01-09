@@ -1,7 +1,3 @@
-import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css';
-
 import { Heading } from '@chakra-ui/react'
 import ProjectCard from '@/components/ProjectCard';
 
@@ -40,11 +36,6 @@ export default function Home() {
         <div>
           <div className="container">
             <div className="position-relative">
-              {/* <div className="photo-container-wrapper position-absolute d-none d-lg-block">
-                <div className="photo-container">
-                  <img src="images/hero-photo.png" alt={name} />
-                </div>
-              </div> */}
               {/* <!-- Overview --> */}
               <About />
               {/* <!-- Experience --> */}
