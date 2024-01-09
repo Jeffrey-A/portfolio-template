@@ -8,7 +8,6 @@ import Typed from 'typed.js';
 import Hero from '../components/Hero';
 import Accordions from '../components/Accordions';
 
-import experienceData from '../data/experience';
 import credentialsData from '../data/credentials';
 import About from '../components/About';
 
@@ -38,11 +37,6 @@ export default function Home() {
             <div className="position-relative">
               {/* <!-- Overview --> */}
               <About />
-              {/* <!-- Experience --> */}
-              <div id="experience" className="section">
-                <Heading mb={5}>Experience</Heading>
-                <Accordions accordions={experienceData} />
-              </div>
               {/* <!-- Credentials --> */}
               <div id="credentials" className="section">
                 <Heading mb={5}>Credentials</Heading>

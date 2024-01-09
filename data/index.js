@@ -1,11 +1,6 @@
 /*
 
 TODO:
-- remove experience
-- Update credentials to be:
---Education, certificates, Courses, Honors
-- Add image to the hero section
-- make sure it looks good on mobile
 - update skills data
 - figure out .next folder
 */
