@@ -1,10 +1,3 @@
-/*
-
-TODO:
-- update skills data
-- figure out .next folder
-*/
-
 export const githubLink = 'https://github.com/Jeffrey-A';
 export const linkedinLink = 'https://www.linkedin.com/in/jeffrey-almanzar/';
 export const email = 'almanzarortizjeffrey@gmail.com';
