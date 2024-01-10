@@ -2,13 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import { Heading, Text, Tooltip, Stack } from '@chakra-ui/react';
 
-import { aboutData, email, linkedinLink, githubLink } from '@/data';
+import { linkedinLink, githubLink } from '@/data';
 
-import Accordions from './Accordions';
+const  sectionHeading = 'About';
+const imageSrc = 'images/about-image.jpeg';
 
 export default function About(props) {
-    const { skills, skillsLabel, imageSrc, sectionHeading } = aboutData;
-
     return (
         <div id="about" className="section">
             <Heading mb={4}>{sectionHeading}</Heading>
